@@ -2,7 +2,7 @@
   "name": "@eddieajau/config-factory",
   "version": "0.1.0",
   "description": "A simple wrapper for nconf.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "dependencies": {
     "nconf": "^0.7.1"
   },
