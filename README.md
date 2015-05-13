@@ -17,7 +17,7 @@ $ npm install @eddieajau/config-factory
 * `overrides` - An optional path to a file that can override the properties merged from configuration directory.
 
 ```js
-var ConfigFactory = require('config-factory');
+var ConfigFactory = require('@eddieajau/config-factory');
 
 var config = ConfigFactory.createConfig({
 	directory: __dirname + '/etc/',
