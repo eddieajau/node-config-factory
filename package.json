@@ -1,0 +1,41 @@
+{
+  "name": "@eddieajau/config-factory",
+  "version": "0.1.0",
+  "description": "A simple wrapper for nconf.",
+  "main": "index.js",
+  "dependencies": {
+    "nconf": "^0.7.1"
+  },
+  "devDependencies": {
+    "app-root-path": "^1.0.0",
+    "istanbul": "^0.3.14",
+    "jshint": "^2.7.0",
+    "mocha": "^2.2.4"
+  },
+  "scripts": {
+    "check": "npm outdated",
+    "lint": "node_modules/.bin/jshint lib/ test/",
+    "lint:checkstyle": "npm run lint -- --reporter checkstyle > checkstyle.xml",
+    "cover": "istanbul cover node_modules/.bin/_mocha -- -R spec test",
+    "test": "npm run test:unit",
+    "test:unit": "node_modules/.bin/mocha test --no-colors",
+    "test:xunit": "npm run test:unit -- --reporter xunit"
+  },
+  "keywords": [
+    "config",
+    "configuration",
+    "directory",
+    "key value store",
+    "overrides"
+  ],
+  "author": "Andrew Eddie",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eddieajau/node-config-factory.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eddieajau/node-config-factory/issues"
+  },
+  "homepage": "https://github.com/eddieajau/node-config-factory#readme"
+}
