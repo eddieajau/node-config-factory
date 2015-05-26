@@ -10,3 +10,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Made `overrides` path optional in `ConfigFactory.createConfig`
+- `ConfigFactory.createConfig` returns a new instance of `Provider` each time, rather than using the `nconf` singleton.

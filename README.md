@@ -39,3 +39,6 @@ $ npm run test
 ## License
 
 MIT
+
+## References
+- http://keepachangelog.com
