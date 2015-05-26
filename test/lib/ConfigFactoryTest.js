@@ -10,7 +10,6 @@
 
 var assert = require('assert');
 var path = require('path');
-var fs = require('fs');
 
 var ConfigFactory = require('app-root-path').require('/lib/ConfigFactory');
 
@@ -55,6 +54,19 @@ suite('ConfigFactory', function () {
 		});
 
 		assert.equal(config.get('audio:mute'), true, 'Should load locals.js');
+
+		config = null;
+	});
+
+	test('should be able to set a config element', function () {
+
+		var config = ConfigFactory.createConfig({
+			directory: __dirname + '/../_fixtures'
+		});
+
+		config.set('audio:volume', '110%');
+
+		assert.equal(config.get('audio:volume'), '110%', 'Should set a value');
 
 		config = null;
 	});
