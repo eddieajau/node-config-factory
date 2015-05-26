@@ -19,7 +19,8 @@
     "cover": "istanbul cover node_modules/.bin/_mocha -- -R spec test",
     "test": "npm run test:unit",
     "test:unit": "node_modules/.bin/mocha test --no-colors",
-    "test:xunit": "npm run test:unit -- --reporter xunit"
+    "test:xunit": "npm run test:unit -- --reporter xunit",
+    "patch": "npm version patch && npm publish && git push --follow-tags"
   },
   "keywords": [
     "config",

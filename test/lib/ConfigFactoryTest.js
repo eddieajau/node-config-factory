@@ -36,6 +36,29 @@ suite('ConfigFactory', function () {
 		config = null;
 	});
 
+	test('should load a directory without overrides set', function () {
+
+		var config = ConfigFactory.createConfig({
+			directory: __dirname + '/../_fixtures',
+			ignore: /locals/
+		});
+
+		assert.equal(config.get('audio:tone'), '0', 'Should ignore the override in locals.js');
+
+		config = null;
+	});
+
+	test('should ignore a file in a directory', function () {
+
+		var config = ConfigFactory.createConfig({
+			directory: __dirname + '/../_fixtures'
+		});
+
+		assert.equal(config.get('audio:mute'), true, 'Should load locals.js');
+
+		config = null;
+	});
+
 	test('should throw an error if the configuration directory does not exist', function () {
 		assert.throws(function () {
 			ConfigFactory.createConfig({
