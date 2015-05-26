@@ -3,6 +3,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+
+## [0.1.3] - 2015-05-26
 ### Fixed
 - Fixed problem with `nconf` where if you don't specify the memory store, it doesn't `set` synchronously.
 
